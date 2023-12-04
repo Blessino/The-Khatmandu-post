@@ -1,0 +1,156 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+
+
+   
+}
+.container{
+    /* margin-left:  25px  ;
+    margin-right: 25px; */
+    padding: 0 25px 0 25px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.nav-menu{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: #1f1f1f;
+    width: 100%;
+    
+
+}
+
+.nav-left{
+   
+}
+
+.nav-left ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    
+
+}
+
+.nav-left ul li {
+    padding: 20px 15px 20px 15px;
+    
+}
+
+.nav-left ul li a{
+   text-decoration: none;
+    color: #d5d5d5;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-left ul li a:hover{
+    color: #fff;
+}
+
+.nav-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:0px 20px 0px 0px;
+    
+}
+
+.nav-right a{
+    padding:0px 10px 0px 0px;
+}
+
+.nav-right a img{
+    background-color: aliceblue;
+    border-radius: 50px ;
+    
+}
+
+/*logo*/
+.header-grid{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 800;
+}
+
+.logo{
+    display: block;
+}
+.logo a img{
+    height: 15vh;
+    width: 100%;
+}
+
+
+
+.header-grid .date{
+    align-self: end;
+  
+
+}
+
+.header-grid .slogon{
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0; */
+}
+
+.header-grid .weather{
+    display: block;
+    align-self: end;
+    text-align: right;
+}
+
+ .top-boarder{
+    border-top: 1px solid #d42620;
+    
+    
+}
+.latest-news {
+    padding: 10px 0;
+}
+
+.latest-news ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.latest-news ul li{
+    
+}
+
+.latest-news ul li h4{
+    padding-left:0;
+    color: #d42620;
+}
+
+.latest-news ul li a{
+    text-decoration: none;
+    padding-left: 20px;
+    color: #323437;
+    
+    
+}
+
+.bottom-boader{
+    border-top: 1px solid #3333334b;
+    
+}
+    
+
+
