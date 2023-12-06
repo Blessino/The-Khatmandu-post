@@ -1,17 +1,24 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Open+Sans&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Hedvig Letters Serif', serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.8;
+    /* font-family: 'Hedvig Letters Serif', serif, 'Open Sans', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    
+    font-size: 14px;
+    line-height: 1.6;
 
 
    
+}
+
+a{
+    text-decoration: none;
+    color:  #323437;
 }
 .container{
     /* margin-left:  25px  ;
@@ -143,6 +150,7 @@
     text-decoration: none;
     padding-left: 20px;
     color: #323437;
+    font-weight: 800;
     
     
 }
@@ -153,4 +161,42 @@
 }
     
 
+/* main */
+/* right section */
+main{
+    color:#323437;
+}
+.headline{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
 
+.card-box{
+   padding-top: 20px;
+}
+
+.card-box h3{
+    font-weight: 800;
+}
+
+.card-box span a{
+  font-size: 12px;
+}
+
+.image{
+   margin-top: 10px;
+}
+
+.image  img{
+    height: 15vh;
+    width: 10vw;
+    margin: 5px;
+    
+}
+
+.pull-right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    text-align: justify;
+}
