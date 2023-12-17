@@ -98,7 +98,7 @@ a{
     display: block;
 }
 .logo a img{
-    height: 15vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -207,7 +207,8 @@ main a:hover{
 }
 
 .artical-author{
-    padding-top: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
 }
 
 .artical-author a{
@@ -217,32 +218,26 @@ main a:hover{
 }
 
 .image{
-   padding-bottom: 20px;
+    float: right;
+    height: auto;
+    width: 50%;
+    overflow: hidden;
 }
 
 .image img{
-    height: 15dvh;
-    width: 10dvw;
-    margin: 0 0 0 15px;
-  
+    height: 100%;
+    width: 100%;
+    display: block;
+    transition: all .3s ease-in-out;
+    
 }
 
-image p{
-  padding-top: 15px;
-}
-
-/* .image img:hover{
+.image img:hover{
     transform: scale(1.2);
-} */
+}
 
 .pull-right {
-    /* padding: 15px 0; */
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    text-align: justify;
-    
-
+    padding: 15px 0;
 }
 
 
@@ -287,12 +282,14 @@ image p{
     width: 100%;
     height: 100%;
     display: block;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .main-image img:hover{
     transform: scale(1.2);
     /* transition: all 0.3s ease-in-out; */
 }
+
+center-img
 
 /* right */
 .right{
@@ -372,7 +369,7 @@ image p{
     padding: 20px 0;
     display: grid;
     grid-template-columns: 3fr 2fr;
-    column-gap: 5px;
+    grid-gap: 20px;
 }
 
 /*-------------------- latset update ------------------------------------*/
