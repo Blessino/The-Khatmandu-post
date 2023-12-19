@@ -13,24 +13,34 @@
     line-height: 1.6;
    }
 
-
+body{
+    overflow-x: hidden;
+}
 
 a{
     text-decoration: none;
     color:  #323437;
 }
 .container{
-    /* margin-left:  25px  ;
-    margin-right: 25px; */
-    padding: 0 25px 0 25px;
-    max-width: 100%;
-    width: 100%;
+    margin-left:  auto  ;
+    margin-right: auto;
+    /* padding: 0 25px 0 25px; */
+    /* max-width: 95%; */
+    width: 95%;
+}
+
+.bottom-boader-dark{
+    
+    border-top: 2px solid #000000a8;
+    
 }
 /*--------------------------nav---------------------*/
 
 .nav-menu{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+    /* display: grid;
+    grid-template-columns: 4fr 1fr; */
+    display: flex;
+    justify-content: space-between;
     background-color: #1f1f1f;
     width: 100%;
     position: fixed;
@@ -218,9 +228,9 @@ main a:hover{
 }
 
 .image{
-    float: right;
-    height: auto;
-    width: 50%;
+    flex: 2;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -237,7 +247,13 @@ main a:hover{
 }
 
 .pull-right {
+        display: flex;
+        flex-direction: row-reverse;
     padding: 15px 0;
+}
+
+.pull-right p{
+    flex: 2;
 }
 
 
@@ -289,7 +305,10 @@ main a:hover{
     /* transition: all 0.3s ease-in-out; */
 }
 
-center-img
+ .center-img{
+   max-width: 30%;
+
+ }
 
 /* right */
 .right{
@@ -364,12 +383,13 @@ center-img
     height: 4px;
     border-bottom: 1px  solid black ;
 }
-
+/* ---------------------------------gutter----------------------------------- */
 .gutter{
     padding: 20px 0;
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 20px;
+    
 }
 
 /*-------------------- latset update ------------------------------------*/
@@ -378,8 +398,52 @@ center-img
     
 }
 
+/*--------------------------------- badge title -------------------------*/
+.bg-black-title {
+    padding: 1px 10px;
+    background-color: #1f1f1f;
+    color: #fff;
+    display: inline-block;
+   
+}
+.bg-black-title::before{
+    content: "";
+   
+   
+    
+}
+
+.badge-title{
+   
+    display: block;
+    width: 100%;
+    border-bottom: 1px #000000 solid;
+    
+}
+
+
+
 /*----------------------- MOST READ -------------------------------*/
+.most-read-table{
+    padding: 10px;
+    border: solid 1px #e9e9e9 ;
+}
 
+.most-read-td{
 
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-start;
+}
+
+.most-read-td h5{
+    /* padding-right: 2px; */
+}
+
+.block-img{
+    flex: none;
+   width: 40%;
+}
 
 
