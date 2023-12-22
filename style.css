@@ -7,7 +7,7 @@
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  max-width: 1300px;
+  max-width: 1200px;
 }
 
 .nav-menu {
@@ -31,7 +31,7 @@
   list-style: none;
 }
 .nav-menu .nav-left ul li {
-  padding-right: 1rem;
+  padding-right: 1em;
 }
 .nav-menu .nav-left ul li a {
   text-decoration: none;
@@ -45,14 +45,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0px 20px 0px 0px;
 }
 .nav-menu .nav-right a {
-  padding: 0px 10px 0px 0px;
+  padding-right: 0.5em;
 }
-.nav-menu .nav-right a img {
-  background-color: aliceblue;
-  border-radius: 50px;
+.nav-menu .nav-right a i {
+  color: #fff;
+  border-radius: 50%;
 }
 
 .header-grid {
