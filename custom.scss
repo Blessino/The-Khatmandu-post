@@ -13,9 +13,7 @@ $nav-bg-color: #1f1f1f;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    
-}
+// container has a fixed width 
 .container{
     margin: 0 auto;
     min-height: 100vh;
@@ -84,9 +82,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    
-    margin-top: 2rem ;
-
+    margin-top: 3.5rem ;
+// logo
     .logo{
         display: block;
 
@@ -96,13 +93,13 @@ body{
         }}
         
     }
-
+// date to the left
     .date{
         align-self: flex-end;
     }
-
+// slogon under the logo
     .slogon {text-align: center;}
-
+// weather is displayed to the right
     .weather{
         display: block;
         align-self: end;
@@ -114,6 +111,44 @@ body{
     }
 }
 
-.top-boarder{
-    border-top: 1px solid $headline-red;
+// red boarder after head
+.top-boarder{border-top: 1px solid $headline-red;}
+
+// latest news
+.latest-news {
+    padding: 1em 0;
+
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        li{
+            h4{
+                padding-left:0;
+                color: #d42620;
+            }
+            a{
+                text-decoration: none;
+                padding-left: 2em;
+                color: #323437;
+                font-weight: 800;
+            }   
+        }
+    }
+}
+
+// light-gray boadrder to the bottom header
+.bottom-boader{ border-top: 1px solid $border-dim_black;}
+
+//               MAIN
+main{
+    color:#323437;
+
+    a{
+        transition: all 0.5s ease-in-out;
+
+        &:hover{
+            color: #909090;
+        }
+    }
 }
