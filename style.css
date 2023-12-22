@@ -1,5 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
   margin: 0 auto;
+  min-height: 100vh;
+  max-width: 1300px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1f1f1f;
+  width: 100%;
+  max-width: inherit;
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  padding: 0.9rem;
+}
+.nav-menu .nav-left {
+  align-self: center;
+}
+.nav-menu .nav-left ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+.nav-menu .nav-left ul li {
+  padding-right: 1rem;
+}
+.nav-menu .nav-left ul li a {
+  text-decoration: none;
+  color: #d5d5d5;
+  transition: all 0.5s ease-in-out;
+}
+.nav-menu .nav-left ul li a:hover {
+  color: #fff;
+}
+.nav-menu .nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
+}
+.nav-menu .nav-right a {
+  padding: 0px 10px 0px 0px;
+}
+.nav-menu .nav-right a img {
+  background-color: aliceblue;
+  border-radius: 50px;
+}
+
+.header-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+.header-grid .logo {
+  display: block;
+}
+.header-grid .logo a img {
+  height: 100%;
+  width: 100%;
+}
+.header-grid .date {
+  align-self: flex-end;
+}
+.header-grid .slogon {
+  text-align: center;
+}
+.header-grid .weather {
+  display: block;
+  align-self: end;
+  text-align: right;
+}
+.header-grid .weather span p {
+  margin: 0.3em;
+}
+
+.top-boarder {
+  border-top: 1px solid #d43630;
 }
 
 /*# sourceMappingURL=style.css.map */
