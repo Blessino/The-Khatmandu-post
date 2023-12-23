@@ -2,7 +2,7 @@
 $headline-red: #d43630;
 $link-gray: #323427;
 $link-white: #d5d5d5;
-$link-white-hover: #fff;
+$link-gray-hover: #909090;
 $border-black: #000000a8;
 $border-dim_black: #3333334b;
 $border-trasparant-light: #e9e9e9;
@@ -13,11 +13,21 @@ $nav-bg-color: #1f1f1f;
     padding: 0;
     box-sizing: border-box;
 }
+
+a{
+    text-decoration: none;
+    color: $link-gray;
+    transition: all 0.5s ease-in-out;
+
+    &:hover{
+        color: $link-gray-hover;
+    }
+}
 // container has a fixed width 
 .container{
     margin: 0 auto;
-    min-height: 100vh;
-   max-width: 1200px;
+    min-height: auto;
+    max-width: 1200px;
 }
 
 // NAV BAR
@@ -127,28 +137,74 @@ $nav-bg-color: #1f1f1f;
                 padding-left:0;
                 color: #d42620;
             }
-            a{
-                text-decoration: none;
-                padding-left: 2em;
-                color: #323437;
-                font-weight: 800;
-            }   
-        }
-    }
+            a{font-weight: 800;}
+     }
+}
+    
 }
 
 // light-gray boadrder to the bottom header
 .bottom-boader{ border-top: 1px solid $border-dim_black;}
 
 //               MAIN
-main{
-    color:#323437;
 
-    a{
-        transition: all 0.5s ease-in-out;
-
-        &:hover{
-            color: #909090;
+.headline{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    column-gap: 1em;
+    row-gap: 1em;
+    margin:2em 0 ;
+    // grid-template-columns: 1fr 2fr 1fr;
+    // padding-top: 20px;
+    .left{
+        // left side artical 
+        //artical container
+        .card-box{
+            //header
+            h3{
+                padding-bottom: 1em;
+            //  a{ padding: 10px 0px;}
+            }
+            //artical author
+            span{ 
+                
+                a{
+                font-size: .9em;
+                padding-top: 0;
+                }
+            }
+            // image and contained side by side
+            .pull-right{
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                gap: 0.1em;
+                padding: 1em 0;
+                //image of the contained
+                .image{
+                    // flex: 2;
+                    height:100%;
+                    width: 100%;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        display: block;
+                        transition: all .3s ease-in-out;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+                p{
+                    width: fit-content;
+                }
+            }
+        }
+        &::after{
+            
         }
     }
 }
+
