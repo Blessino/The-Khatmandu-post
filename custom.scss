@@ -161,6 +161,7 @@ a{
         // left side artical 
         //artical container
         .card-box{
+            height: inherit;
             //header
             h3{
                 padding-bottom: 1em;
@@ -202,9 +203,11 @@ a{
                 }
             }
         }
-        &::after{
-            
-        }
+        // &::after{
+        //     content: "";
+        //     display: block;
+        //     border-bottom: 1px  $border-dim_black solid;
+        // }
     }
 }
 

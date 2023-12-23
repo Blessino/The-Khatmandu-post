@@ -123,6 +123,9 @@ a:hover {
   row-gap: 1em;
   margin: 2em 0;
 }
+.headline .left .card-box {
+  height: inherit;
+}
 .headline .left .card-box h3 {
   padding-bottom: 1em;
 }
