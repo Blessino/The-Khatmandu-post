@@ -116,9 +116,11 @@ a:hover {
 }
 
 .headline {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  column-gap: 1em;
   margin: 2em 0;
-  grid-template-columns: 1fr 2fr 1fr;
   gap: 1em;
   padding-top: 20px;
 }
@@ -128,29 +130,32 @@ a:hover {
 .headline .left .card-box h3 {
   padding: 0.3em 0;
 }
-.headline .left .card-box span a {
+.headline .left .card-box .artical-author a {
   font-size: 0.9em;
 }
-.headline .left .card-box .pull-right {
+.headline .left .card-box .image {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
   gap: 0.1em;
   padding: 1em 0;
-}
-.headline .left .card-box .pull-right .image {
   height: 100%;
   width: 100%;
+}
+.headline .left .card-box .image a {
   overflow: hidden;
 }
-.headline .left .card-box .pull-right .image img {
+.headline .left .card-box .image img {
   height: 100%;
   width: 100%;
   display: block;
   transition: all 0.3s ease-in-out;
 }
-.headline .left .card-box .pull-right .image img:hover {
+.headline .left .card-box .image img:hover {
   transform: scale(1.2);
+}
+.headline .left .card-box .image p {
+  width: fit-content;
 }
 .headline .center {
   flex: 0 1 auto;
@@ -176,68 +181,63 @@ a:hover {
 .headline .center .card-box h3 {
   padding: 0.3em 0;
 }
-.headline .center .card-box span a {
+.headline .center .card-box .artical-author a {
   font-size: 0.9em;
 }
-.headline .center .card-box .pull-right {
+.headline .center .card-box .image {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
   gap: 0.1em;
   padding: 1em 0;
-}
-.headline .center .card-box .pull-right .image {
   height: 100%;
   width: 100%;
+}
+.headline .center .card-box .image a {
   overflow: hidden;
 }
-.headline .center .card-box .pull-right .image img {
+.headline .center .card-box .image img {
   height: 100%;
   width: 100%;
   display: block;
   transition: all 0.3s ease-in-out;
 }
-.headline .center .card-box .pull-right .image img:hover {
+.headline .center .card-box .image img:hover {
   transform: scale(1.2);
+}
+.headline .center .card-box .image p {
+  width: fit-content;
 }
 .headline .right {
   flex: 0 1 auto;
 }
 .headline .right .title h4 a {
-  color: var(--headline-red);
+  color: #d43630;
 }
 .headline .right .title h4 a::after {
   width: 20px;
-  border-bottom: solid 2px var(--headline-red);
   content: "";
   display: block;
+  border-bottom: solid 2px #d43630;
 }
-.headline .right .card-box h3 {
+.headline .right .artical-image {
   padding: 0.3em 0;
 }
-.headline .right .card-box span a {
+.headline .right .artical-image h3 {
+  padding: 0.5em 0;
+}
+.headline .right .artical-image p {
+  padding: 0.5em 0;
+}
+.headline .right .artical-image .artical-author a {
   font-size: 0.9em;
 }
-.headline .right .card-box .pull-right {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  gap: 0.1em;
-  padding: 1em 0;
-}
-.headline .right .card-box .pull-right .image {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-.headline .right .card-box .pull-right .image img {
-  height: 100%;
-  width: 100%;
-  display: block;
-  transition: all 0.3s ease-in-out;
-}
-.headline .right .card-box .pull-right .image img:hover {
-  transform: scale(1.2);
+.headline .right .artical-image .img-circle img {
+  max-width: 15%;
+  height: auto;
+  float: right;
+  border-radius: 50%;
+  align-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

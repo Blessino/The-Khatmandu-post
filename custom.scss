@@ -10,6 +10,14 @@ $nav-bg-color: #1f1f1f;
 
 //MIXIN
 
+@mixin articalAuthor{
+    .artical-author{
+        a{
+            font-size: .9em;
+        }
+    }
+}
+
 @mixin cardBox{
     .card-box{
            
@@ -21,52 +29,45 @@ $nav-bg-color: #1f1f1f;
         //  a{ padding: 10px 0px;}
         }
         //artical author
-        span{ 
-            
-            a{
-            font-size: .9em;
-            
-            }
-        }
+        @include articalAuthor();
+        
         // image and contained side by side
-        .pull-right{
+      
+        //image of the contained
+        .image{
+             // flex: 2;
             display: flex;
             flex-direction: row-reverse;
             align-items: flex-start;
-            gap: 0.1em;
-            padding: 1em 0;
-            //image of the contained
-            .image{
-                // flex: 2;
-                height:100%;
-                width: 100%;
-                overflow: hidden;
-                img{
-                    height: 100%;
-                    width: 100%;
-                    display: block;
-                    transition: all .3s ease-in-out;
-                    &:hover{
-                        transform: scale(1.2);
-                    }
-                }
-            }
-            p{
-                // width: fit-content;
-            }
+             gap: 0.1em;
+
+             padding: 1em 0;
+            height:100%;
+            width: 100%;
+            a{ overflow: hidden; }
+                
+            img{
+                 height: 100%;
+                 width: 100%;
+                  display: block;
+                  transition: all .3s ease-in-out;
+                 &:hover{ transform: scale(1.2); }
+                }   
+            p{width: fit-content;}
         }
     }
 }
 
 @mixin headlinetitle{
     .title{
+        
         h4{
-            a{ color: var(--headline-red);
+            a{ color: $headline-red;
                 &::after{
                     width: 20px;
-                    border-bottom: solid 2px var(--headline-red);
                     content: "";
                     display: block;
+                    border-bottom: solid 2px $headline-red;
                     
                 }
             }
@@ -215,19 +216,17 @@ a{
 //               MAIN
 
 .headline{
-    display: grid;
-    // justify-content: space-between;
-    // align-self: center;
-    // column-gap: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    column-gap: 1em;
     margin:2em 0 ;
-    grid-template-columns: 1fr 2fr 1fr;
+    // grid-template-columns: 1fr 2fr 1fr;
     gap: 1em;
     padding-top: 20px;
     .left{
         // left side artical 
         flex:0 1.5 auto;
-    
-
         //artical container
         @include cardBox();
     }
@@ -260,7 +259,27 @@ a{
     .right{
         flex: 0 1 auto;
         @include headlinetitle();
-        @include cardBox();
+        .artical-image{
+            padding: 0.3em 0;
+            h3{
+                padding: 0.5em 0;
+            }
+            p{
+                padding: 0.5em 0;
+            }
+            @include articalAuthor();
+            .img-circle{
+                img{
+    
+                    max-width: 15%;
+                    height: auto;
+                    float: right;
+                    border-radius: 50%;
+                    align-content: center;
+                    
+                }
+            }
+        }
     }
 }
 
