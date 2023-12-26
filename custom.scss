@@ -20,8 +20,6 @@ $nav-bg-color: #1f1f1f;
 
 @mixin cardBox{
     .card-box{
-           
-           
         //header
         h3{
             
@@ -40,22 +38,24 @@ $nav-bg-color: #1f1f1f;
             flex-direction: row-reverse;
             align-items: flex-start;
              gap: 0.1em;
-
+            @include imageHover();
              padding: 1em 0;
             height:100%;
             width: 100%;
-            a{ overflow: hidden; }
-                
-            img{
-                 height: 100%;
-                 width: 100%;
-                  display: block;
-                  transition: all .3s ease-in-out;
-                 &:hover{ transform: scale(1.2); }
-                }   
-            p{width: fit-content;}
+             
+            // p{width: fit-content;}
         }
     }
+}
+@mixin imageHover {
+    a{ overflow: hidden; }
+         img{
+            height: 100%;
+            width: 100%;
+            display: block;
+            transition: all .3s ease-in-out;
+            &:hover{ transform: scale(1.2); }
+        }  
 }
 
 @mixin headlinetitle{
@@ -74,6 +74,7 @@ $nav-bg-color: #1f1f1f;
         }
     }
 }
+@include headlinetitle();
 
 *{
     margin: 0;
@@ -200,8 +201,9 @@ a{
         display: flex;
         justify-content: flex-start;
         li{
+            padding-left:1em;
+             
             h4{
-                padding-left:0;
                 color: #d42620;
             }
             a{font-weight: 800;}
@@ -214,7 +216,7 @@ a{
 .bottom-boader{ border-top: 1px solid $border-dim_black;}
 
 //               MAIN
-
+// headline section
 .headline{
     display: flex;
     justify-content: space-between;
@@ -233,13 +235,9 @@ a{
 
     .center{
         flex:0 1 auto;
+        // first artical
         .top-box{
-            h2{
-                padding: 1em 0;
-            }
-            p{
-                padding: 1em 0;
-            }
+            // first arical image
             .main-image{
                 overflow: hidden;
                 img{
@@ -247,12 +245,17 @@ a{
                     height: 100%;
                     display: block;
                     transition: all 0.5s ease-in-out;
-                    &:hover{
-                        transform: scale(1.2);
-                    }
+                    &:hover{ transform: scale(1.2);}
                 }
             }
+            h2{
+                padding: 1em 0;
+            }
+            p{
+                padding: 1em 0;
+            }
         }
+        //last artical
         @include cardBox();
     }
 
@@ -283,3 +286,60 @@ a{
     }
 }
 
+//visual stories section
+
+.visual-stories{
+    padding: 0.9em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    
+
+        .main-image{
+            overflow: hidden;
+            @include imageHover();
+        }
+        .figcaption{
+            padding: 1em 0.8em 1em 0;
+            a{ h5{
+                font-size: 1.2em ;
+                font-weight: 800;
+                }
+            }
+        }
+    
+}
+.double-line{
+    border-top: 1px  solid black ;
+    height: 4px;
+    border-bottom: 1px  solid black ;
+}
+//GUTTER
+
+.gutter{
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 1.5em;
+    .latest-update{
+    //title is glober style, declared right after mixin "headlinetitle"
+        @include cardBox();
+        .badge-title{
+   
+            display: block;
+            width: 100%;
+            border-bottom: 1px #000000 solid;
+            .bg-black-title {
+                padding: 0.1em 0.8em;
+                background-color: $nav-bg-color;
+                color: #fff;
+                display: inline-block;
+               
+            }
+        }
+    }
+
+   
+}
