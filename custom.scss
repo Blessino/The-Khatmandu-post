@@ -76,6 +76,28 @@ $nav-bg-color: #1f1f1f;
 }
 @include headlinetitle();
 
+@mixin culterArt{
+    .top-box{
+        // first arical image
+        .main-image{
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                display: block;
+                transition: all 0.5s ease-in-out;
+                &:hover{ transform: scale(1.2);}
+            }
+        }
+        h3{
+            padding: 1em 0;
+        }
+        p{
+            padding-bottom: 1em;
+        }
+    }
+}
+//---------------------------------------------------------------------------------------------------------------------------
 *{
     margin: 0;
     padding: 0;
@@ -311,6 +333,7 @@ a{
     
 }
 .double-line{
+    margin: 1em 0;
     border-top: 1px  solid black ;
     height: 4px;
     border-bottom: 1px  solid black ;
@@ -394,4 +417,25 @@ a{
              }
         }
     }
+}
+
+.culter-art{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    column-gap: 1em;
+    margin:2em 0 ;
+    gap: 1em;
+   .left{
+        flex: 2;
+        @include culterArt();
+   }
+   .center{
+        flex: 1;
+        @include culterArt();
+   }
+   .right{
+        flex: 1;
+        @include culterArt();
+   }
 }
