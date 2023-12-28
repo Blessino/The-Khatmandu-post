@@ -371,7 +371,7 @@ a{
             .table{
                 margin: 1em 0;
                 padding: 0.8em;
-                border: solid 1px #e9e9e9 ;
+                border: solid 1px $border-trasparant-light ;
                 .table-data{
                     padding: 10px;
                     display: flex;
@@ -426,6 +426,7 @@ a{
     column-gap: 1em;
     margin:2em 0 ;
     gap: 1em;
+    //title is glober style, declared right after mixin "headlinetitle"
    .left{
         flex: 2;
         @include culterArt();
@@ -438,4 +439,36 @@ a{
         flex: 1;
         @include culterArt();
    }
+}
+
+.block-news{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    .block-newsCat{
+        //title is glober style, declared right after mixin "headlinetitle"
+        margin: 1em 0;
+        .table{
+            margin: 1em 0;
+            display: block;
+            height: 100%;
+            border: solid 1px $border-trasparant-light ;
+            
+            figure{
+                @include imageHover();
+                overflow: hidden;
+            }
+            ul{
+                list-style: none;
+                li{
+                    padding: 1em 0.5em;
+                    border-bottom: solid 1px $border-trasparant-light ;
+                        h5{
+                            a{font-size: 1.4em;}
+                        }
+                    }
+            }
+        }
+    }
 }
