@@ -1,0 +1,14 @@
+{
+  "name": "the-kathmandu-post",
+  "version": "1.0.0",
+  "description": "",
+  "main": "custom.js",
+  "scripts": {
+    "compile:sass": "node-sass custom.scss style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
