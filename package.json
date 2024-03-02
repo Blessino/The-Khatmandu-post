@@ -2,13 +2,16 @@
   "name": "the-kathmandu-post",
   "version": "1.0.0",
   "description": "",
-  "main": "custom.js",
+  "source": "index.html",
   "scripts": {
-    "compile:sass": "node-sass custom.scss style.css -w"
+    "start": "sass custom.scss style.css --watch --style compressed"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.71.1"
   }
 }
