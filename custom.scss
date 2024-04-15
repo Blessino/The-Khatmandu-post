@@ -201,7 +201,7 @@ a{
 
     @include forSmallScreen(640) {
         // showing off-canvas menu for small screen
-        .hamnav {
+        & {
             display: block;
         }
         // hidding checkbox
