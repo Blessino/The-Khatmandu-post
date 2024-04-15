@@ -36,10 +36,12 @@ $footer-border: #666;
       
         //image of the contained
         .image{
-             // flex: 2;
+            width: 100%;
+            height: 100%;
+            //  flex: 2;
             display: flex;
             flex-direction: row-reverse;
-            align-items: flex-start;
+            align-items: center;
              gap: 0.1em;
             @include imageHover();
              padding: 1em 0;
@@ -120,7 +122,8 @@ a{
 // container has a fixed width 
 .container{
     margin: 0 auto;
-    min-height: fit-content;
+    // min-height: fit-content;
+    width: 90%;
     max-width: 1200px;
 }
 
@@ -247,20 +250,20 @@ a{
     display: flex;
     justify-content: space-between;
     align-self: center;
-    column-gap: 1em;
+    gap: 2em;
     margin:2em 0 ;
-    // grid-template-columns: 1fr 2fr 1fr;
-    gap: 1em;
     padding-top: 20px;
     .left{
         // left side artical 
-        flex:0 1.5 auto;
+        // flex:0 1.5 auto;
+        flex: 30%;
         //artical container
         @include cardBox();
     }
 
     .center{
-        flex:0 1 auto;
+        // flex:0 1 auto;
+        flex: 40%;
         // first artical
         .top-box{
             // first arical image
@@ -286,7 +289,8 @@ a{
     }
 
     .right{
-        flex: 0 1 auto;
+        // flex: 0 1 auto;
+        flex: 20%;
         @include headlinetitle();
         .artical-image{
             padding: 0.3em 0;
@@ -508,3 +512,11 @@ footer{
         border-top: 1px solid $footer-border;
     }
 }
+
+
+// --------------------------------------------------------------------------------------------------------------------
+// -----------MEDIA QUARY------------------
+
+// variables
+
+$breakpoint-tab: 1200px;
