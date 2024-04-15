@@ -13,6 +13,12 @@ $footer-border: #666;
 
 //MIXIN
 
+// MEDIA QUERRY 
+@mixin forSmallScreen($media) {
+    @media (max-width: calc($media / 16 * 1em)) { @content; }
+}
+    
+
 @mixin articalAuthor{
     .artical-author{
         a{
@@ -159,6 +165,11 @@ a{
                      transition: all 0.5s ease-in-out;
                      &:hover { color: #fff;}
                  }
+                 @include forSmallScreen(640) {
+                    &:not(:first-child) {
+                        display: none;
+                    }
+                 }
                  
             }
            
@@ -182,6 +193,93 @@ a{
         }
     }
 }
+// OFF-CANVAS NEVAIGATION MENU
+.hamnav {
+    // Hamberger navbar
+    // hiding off-canvas menu for large screen
+    display: none;
+
+    @include forSmallScreen(640) {
+        // showing off-canvas menu for small screen
+        .ham {
+            display: block;
+        }
+        // hidding checkbox
+        .nav-trigger {
+            position: absolute;
+            clip: rect(0,0,0,0);
+        }
+        // off-canvas nav open
+        .opennav{
+            // hamburger menu 
+            width: 18px;
+            height: 2px;
+            background: #fff;
+            transition: all 0.3s;
+            &.middle, &.bottom {
+            // hambergur menu distance
+                margin-top: 3px;
+            }
+        }
+        // off-canvas nav close
+        .closenav{
+            // closing cross
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            transition: all 0.3s;
+            // making closing cross
+            &.middle {
+                // hidding middle bar
+                transform: translateX(-100deg);
+                opacity: 0;
+            }
+            &.top {
+                // rotating top bar cloclwise
+                transform: rotate(135deg);
+                margin-top: 15px;
+            }
+            &.bottom {
+                // rotating bottom bar anti-clockwise
+                transform: rotate(-135deg);
+                margin-top: -4px;
+            }
+        }
+        // offcanvas menu content
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0%;
+            left: 0;
+            background-color: #1f1f1f;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-left: 6opx;
+            & a{
+                // content style
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                // color: #818181;
+                display: block;
+                transition: 0.3s;
+                // &:hover { color: #f1f1f1; }
+            }
+            & .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+        }
+    }
+}
+
+
+
 
 // HEADER LOGO
 
