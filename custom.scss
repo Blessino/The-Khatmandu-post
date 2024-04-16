@@ -583,6 +583,9 @@ a{
         flex: 1;
         @include culterArt();
    }
+   @include forSmallScreen(640) {
+    flex-direction: column;
+   }
 }
 
 .block-news{
@@ -615,6 +618,9 @@ a{
             }
         }
     }
+    @include forSmallScreen(640) {
+        flex-direction: column;
+    }
 }
 
 // footer
@@ -642,17 +648,12 @@ footer{
                 gap: 0.3em;
             }
         }
+        @include forSmallScreen(640) {
+            flex-direction: column;
+        }
     }
     .footer-boader{ 
         margin: 1em 0;
         border-top: 1px solid $footer-border;
     }
 }
-
-
-// --------------------------------------------------------------------------------------------------------------------
-// -----------MEDIA QUARY------------------
-
-// variables
-
-$breakpoint-tab: 1200px;
