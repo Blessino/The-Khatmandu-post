@@ -127,10 +127,9 @@ a{
 }
 // container has a fixed width 
 .container{
-    margin: 0 auto;
-    // min-height: fit-content;
-    width: 90%;
-    max-width: 1200px;
+    margin: auto;
+    width: 1400px;
+    @include forSmallScreen(1440) { width: 95%; }
 }
 
 // NAV BAR
@@ -415,7 +414,7 @@ a{
         //last artical
         @include cardBox();
         @include forSmallScreen(640) {
-            order: 1;
+            order: -1;
         }
     }
 
@@ -458,8 +457,6 @@ a{
     justify-content: space-between;
     align-items: center;
     gap: 1em;
-    
-
         .main-image{
             overflow: hidden;
             @include imageHover();
@@ -472,7 +469,9 @@ a{
                 }
             }
         }
-    
+    @include forSmallScreen(640) {
+        flex-direction: column;
+    }
 }
 .double-line{
     margin: 1em 0;
@@ -558,6 +557,9 @@ a{
                 //}
              }
         }
+    }
+    @include forSmallScreen(640) {
+        flex-direction: column;
     }
 }
 
