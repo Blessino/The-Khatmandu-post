@@ -163,7 +163,7 @@ a{
                 
                 a{
                     text-decoration: none;
-                     color: #d5d5d5;
+                     color: $link-white;
                      transition: all 0.5s ease-in-out;
                      &:hover { color: #fff;}
                  }
@@ -278,7 +278,7 @@ a{
                     content: "";
                     display: block;
                     margin-top: 10px;
-                    border-bottom: 1px solid #f1f1f1;
+                    border-bottom: 1px solid $link-white;
                 }
             }
             & .closebtn {
@@ -309,27 +309,36 @@ a{
     .logo{
         display: block;
 
-        a {img{
-            height: 100%;
-            width: 100%;
-        }}
-        
+        a {
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        @include forSmallScreen(640) {
+            display: none;
+        }
     }
 // date to the left
     .date{
         align-self: flex-end;
+        @include forSmallScreen(768) {
+            font-size: .7rem;
+        }
     }
 // slogon under the logo
-    .slogon {text-align: center;}
+    .slogon {text-align: center; @include forSmallScreen(640) { display: none;}}
 // weather is displayed to the right
     .weather{
         display: block;
         align-self: end;
         text-align: right;
-        span{ p{
-            margin: 0.3em;
-            
-        }}
+        span{ 
+            p{ margin: 0.3em;}
+        }
+        @include forSmallScreen(768) {
+            font-size: .7rem;
+        }
     }
 }
 
@@ -339,7 +348,6 @@ a{
 // latest news
 .latest-news {
     padding: 1em 0;
-
     ul{
         list-style: none;
         display: flex;
@@ -351,9 +359,14 @@ a{
                 color: #d42620;
             }
             a{font-weight: 800;}
-     }
-}
-    
+        }
+    }
+    @include forSmallScreen(768) {
+        font-size: .8rem;
+    }
+    @include forSmallScreen(640) {
+        display: none;
+    }
 }
 
 // light-gray boadrder to the bottom header
@@ -401,6 +414,9 @@ a{
         }
         //last artical
         @include cardBox();
+        @include forSmallScreen(640) {
+            order: 1;
+        }
     }
 
     .right{
@@ -428,6 +444,9 @@ a{
                 }
             }
         }
+    }
+    @include forSmallScreen(640) {
+        flex-direction: column;
     }
 }
 
