@@ -267,13 +267,19 @@ a{
             padding-left: 6opx;
             & a{
                 // content style
-                padding: 8px 8px 8px 32px;
+                padding: 25px 25px 8px 25px;
                 text-decoration: none;
                 font-size: 25px;
                 // color: #818181;
                 display: block;
                 transition: 0.3s;
                 // &:hover { color: #f1f1f1; }
+                &::after {
+                    content: "";
+                    display: block;
+                    margin-top: 10px;
+                    border-bottom: 1px solid #f1f1f1;
+                }
             }
             & .closebtn {
                 position: absolute;
@@ -281,6 +287,9 @@ a{
                 right: 25px;
                 font-size: 36px;
                 margin-left: 50px;
+                &::after {
+                    border-bottom: none;
+                }
             }
         }
     }
